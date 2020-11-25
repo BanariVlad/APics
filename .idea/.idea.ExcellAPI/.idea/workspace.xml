@@ -10,6 +10,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -23,6 +26,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1kBZbMvyHu3zBPR1MnpWZNOGmBU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -66,7 +70,7 @@
       <updated>1605176015907</updated>
       <workItem from="1605176021447" duration="890000" />
       <workItem from="1605685515797" duration="3671000" />
-      <workItem from="1606284586340" duration="10207000" />
+      <workItem from="1606284586340" duration="10247000" />
     </task>
     <servers />
   </component>
@@ -79,6 +83,14 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="671" y="418" width="410" height="204" key="Github.ShareDialog" timestamp="1606301838615">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="671" y="418" width="410" height="204" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606301838615" />
+    <state x="733" y="226" key="Github.UntrackedFilesDialog" timestamp="1606301845983">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="733" y="226" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606301845983" />
     <state width="1877" height="92" key="GridCell.Tab.0.bottom" timestamp="1606294310386">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

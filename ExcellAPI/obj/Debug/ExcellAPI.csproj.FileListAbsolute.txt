@@ -1,0 +1,12 @@
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\bin\Debug\ExcellAPI.exe.config
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\bin\Debug\ExcellAPI.exe
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\bin\Debug\ExcellAPI.pdb
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\obj\Debug\ExcellAPI.csprojAssemblyReference.cache
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\obj\Debug\ExcellAPI.Properties.Resources.resources
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\obj\Debug\ExcellAPI.csproj.GenerateResource.cache
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\obj\Debug\ExcellAPI.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\obj\Debug\ExcellAPI.exe
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\obj\Debug\ExcellAPI.pdb
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\obj\Debug\ExcellAPI.Form1.resources
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\obj\Debug\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\obj\Debug\ExcellAPI.csproj.ResolveComReference.cache

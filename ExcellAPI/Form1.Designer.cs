@@ -38,7 +38,6 @@
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
@@ -63,6 +62,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "Diagram";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -86,7 +86,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.richTextBox1);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Location = new System.Drawing.Point(3, 56);
             this.panel2.Name = "panel2";
@@ -105,27 +104,18 @@
             // 
             // Id
             // 
-            this.Id.HeaderText = "Id";
+            this.Id.HeaderText = "Age";
             this.Id.Name = "Id";
             // 
             // Product
             // 
-            this.Product.HeaderText = "Prdocut";
+            this.Product.HeaderText = "Name";
             this.Product.Name = "Product";
             // 
             // Cost
             // 
-            this.Cost.HeaderText = "Cost";
+            this.Cost.HeaderText = "Greeting";
             this.Cost.Name = "Cost";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(24, 279);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(950, 351);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // Form1
             // 
@@ -141,8 +131,6 @@
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
         }
-
-        private System.Windows.Forms.RichTextBox richTextBox1;
 
         private System.Windows.Forms.Button button3;
 

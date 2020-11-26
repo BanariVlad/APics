@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Net;
 using System.Windows.Forms;
+using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Drawing.Charts;
 using Newtonsoft.Json;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace ExcellAPI
 {
-    public class API
+    public class Api
     {
-        private string url = "http://localhost:3000/posts";
-        private void CopyAll(DataGridView dataGrid)
+        private const string Url = "http://localhost:3000/posts";
+
+        private static void CopyAll(DataGridView dataGrid)
         {
             dataGrid.RowHeadersVisible = false;
             dataGrid.SelectAll();
@@ -17,12 +21,13 @@ namespace ExcellAPI
                 Clipboard.SetDataObject(dataObj);
         }
 
-        public void ImportFile(DataGridView dataGrid)
+        public static void ImportFile(DataGridView dataGrid)
         {
+            dataGrid.Rows.Clear();
             Microsoft.Office.Interop.Excel.Application app;
-            Microsoft.Office.Interop.Excel.Workbook workbook;
-            Microsoft.Office.Interop.Excel.Worksheet worksheet;
-            Microsoft.Office.Interop.Excel.Range range;
+            Excel.Workbook workbook;
+            Excel.Worksheet worksheet;
+            Excel.Range range;
 
             var dialog = new OpenFileDialog();
             var path = dialog.ShowDialog() == DialogResult.OK ? dialog.FileName : "";
@@ -33,40 +38,61 @@ namespace ExcellAPI
                 workbook = app.Workbooks.Open(path);
                 worksheet = workbook.Worksheets["main"];
                 range = worksheet.UsedRange;
-                var i = 0;
                 for (var row = 2; row <= range.Rows.Count; row++)
                 {
-                    i++;
                     dataGrid.Rows.Add(range.Cells[row, 1].Text, range.Cells[row, 2].Text,
                         range.Cells[row, 3].Text);
                 }
-                workbook.Close();
-                app.Quit();
             }
         }
 
-        public void ExportFile(DataGridView dataGrid)
+        public static void ExportFile(DataGridView dataGrid, bool isCalculated = false)
         {
             CopyAll(dataGrid);
             Microsoft.Office.Interop.Excel.Application app;
-            Microsoft.Office.Interop.Excel.Workbook workbook;
-            Microsoft.Office.Interop.Excel.Worksheet worksheet;
+            Excel.Workbook workbook;
+            Excel.Worksheet worksheet;
             object misValue = System.Reflection.Missing.Value;
-            app = new Microsoft.Office.Interop.Excel.Application();
-            app.Visible = true;
+            app = new Microsoft.Office.Interop.Excel.Application() /*{Visible = true}*/;
             workbook = app.Workbooks.Add(misValue);
-            worksheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Worksheets.Item[1];
-            var select = (Microsoft.Office.Interop.Excel.Range)worksheet.Cells[1, 1];
+            worksheet = (Excel.Worksheet) workbook.Worksheets.Item[1];
+            var select = (Excel.Range) worksheet.Cells[1, 1];
             select.Select();
-            worksheet.PasteSpecial(select, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+            if (isCalculated)
+            {
+                worksheet.Cells[dataGrid.Rows.Count + 1, 1].FormulaLocal = "=СРЗНАЧ(;A2:A11)";
+            }
+
+            worksheet.PasteSpecial(select, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing, true);
+            app.Visible = true;
+            dataGrid.ClearSelection();
         }
 
-        public void GetData(RichTextBox text)
+        public static void CalcAverage(DataGridView dataGrid)
         {
-            var client = new WebClient();
-            var data = client.DownloadString(url);
-            dynamic dobj = JsonConvert.DeserializeObject<dynamic>(data);
-            text.Text = dobj.ToString();
+            dataGrid.Rows.Clear();
+            var data = GetData();
+            foreach (var col in data)
+            {
+                dataGrid.Rows.Add(col.age, col.name, col.text);
+            }
+
+            ExportFile(dataGrid, true);
+        }
+
+        private static dynamic GetData()
+        {
+            try
+            {
+                var client = new WebClient();
+                var data = client.DownloadString(Url);
+                return JsonConvert.DeserializeObject<dynamic>(data);
+            }
+            catch
+            {
+                return "";
+            }
         }
     }
 }

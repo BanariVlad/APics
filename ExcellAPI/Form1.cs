@@ -13,20 +13,20 @@ namespace ExcellAPI
 {
     public partial class Form1 : Form
     {
-        API Excel = new API();
+        private Api _excel = new Api();
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e) => Excel.ImportFile(dataGridView1);
+        private void button1_Click(object sender, EventArgs e) => Api.ImportFile(dataGridView1);
 
-        private void button2_Click(object sender, EventArgs e) => Excel.ExportFile(dataGridView1);
+        private void button2_Click(object sender, EventArgs e) => Api.ExportFile(dataGridView1);
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            Excel.GetData(richTextBox1);
+            Api.CalcAverage(dataGridView1);
         }
     }
 }

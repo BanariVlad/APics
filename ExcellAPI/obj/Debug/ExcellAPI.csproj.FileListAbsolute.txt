@@ -13,3 +13,11 @@ C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\obj\Debug\ExcellAPI.csproj.Resol
 C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\bin\Debug\Newtonsoft.Json.dll
 C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\obj\Debug\ExcellAPI.csproj.CopyComplete
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\bin\Debug\ClosedXML.dll
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\bin\Debug\ExcelNumberFormat.dll
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\bin\Debug\System.IO.Packaging.dll
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\bin\Debug\ClosedXML.pdb
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\bin\Debug\ClosedXML.xml
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\ASUS\RiderProjects\ExcellAPI\ExcellAPI\bin\Debug\ExcelNumberFormat.xml
